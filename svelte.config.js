@@ -1,10 +1,13 @@
-// svelte.config.js
 import adapter from '@sveltejs/adapter-static';
 
-export default {
-  kit: {
-    adapter: adapter({
-      fallback: 'index.html'
-    })
-  }
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+    kit: {
+        adapter: adapter(),
+        prerender: {
+            default: true
+        }
+    }
 };
+
+export default config;
